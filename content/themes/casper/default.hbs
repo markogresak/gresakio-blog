@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {{! Document Settings }}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> {{! Page Meta }}
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="shortcut icon" href="{{asset "favicon.ico"}}"> {{! Styles'n'Scripts }}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" /> {{! Ghost outputs important style and meta data with this tag }} {{ghost_head}}
+</head>
+
+<body class="{{body_class}} nav-closed">
+
+  {{navigation}}
+
+  <div class="site-wrapper">
+
+    {{! Everything else gets inserted here }} {{{body}}}
+
+    <footer class="site-footer clearfix">
+      <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
+      <section class="copyright">Marko Grešak &copy; {{date format="YYYY"}}</section>
+      <!-- <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section> -->
+    </footer>
+
+  </div>
+
+  {{! Ghost outputs important scripts and data with this tag }} {{ghost_foot}} {{! The main JavaScript file for Casper }}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
+  <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
+
+  <script>
+    !function(e,a,t,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=a.createElement(t),s=a.getElementsByTagName(t)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-46171546-6","auto"),ga("send","pageview");
+  </script>
+
+</body>
+
+</html>
