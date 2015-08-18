@@ -59,4 +59,10 @@
     });
 
   };
+
+  var postContent = $('.post-content');
+  // If on post page.
+  if (postContent.length === 1) {
+    $('.read-time').html((Math.floor(postContent.text().trim().replace(/\r?\n/g,'').replace(/\s{2,}/g, ' ').split(' ').length / 200) || '< 1') + ' min read');
+  }
 })(jQuery);
