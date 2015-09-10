@@ -33,12 +33,7 @@
     {{! Everything else gets inserted here }} {{{body}}}
 
     <footer class="site-footer clearfix">
-      <p class="subscribe-button">
-        Subscribe:
-        <a class="icon-feed" href="{{@blog.url}}/rss/">RSS</a>
-        <a class="subscribe-mail" href="#">Mail</a>
-      </p>
-
+      <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
       <section class="copyright">Marko Grešak &copy; {{date format="YYYY"}}</section>
       <!-- <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section> -->
     </footer>
@@ -50,8 +45,6 @@
   <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
   <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
   <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
-
-  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
 
   <script>
     !function(e,a,t,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=a.createElement(t),s=a.getElementsByTagName(t)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-46171546-6","auto"),ga("send","pageview");
