@@ -24,6 +24,7 @@
   "main": "./core/index",
   "scripts": {
     "start": "node index",
+	"deploy": "NODE_ENV=production pm2 start index.js --name 'Ghost'",
     "test": "grunt validate --verbose",
     "min": "f='content/themes/casper/assets/css/screen.css'; cssnext $f | cleancss > \"${f}.min\" && mv \"${f}.min\" $f; unset f"
   },
